@@ -7,8 +7,63 @@
     <title>Home </title>
     <link rel="stylesheet" href="{% static 'styles/main.css' %}">
     <link rel="Stylesheet" href="{% static 'styles/bootstrap/css/bootstrap.css' %}">
+    <style>
+     
+        .site-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            font-family: sans-serif;
+        }
+
+        .brand-logo {
+            color:gold;
+            font-size: 15px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li { 
+            margin-left: 30px; 
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color:khaki;
+        }
+
+    </style
 </head>
 <body>
+    <header class="site-header">
+        <h2 class="brand-logo">MyShop</h2>
+    </header>
+     <nav>
+         <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="">Sign Up</a></li>
+            </ul>
+          
+    </nav>
+        
+ 
     <h2>Welcome  to My  Shop</h2>
     <button class="btn btn-success">Read More...</button>
 </body>
