@@ -1,12 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home </title>
-    <link rel="stylesheet" href="../../static/styles/main.css">
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    <link rel="Stylesheet" href="{% static 'styles/bootstrap/css/bootstrap.css' %}">
 </head>
 <body>
     <h2>Welcome  to My  Shop</h2>
+    <button class="btn btn-success">Read More...</button>
 </body>
 </html>
