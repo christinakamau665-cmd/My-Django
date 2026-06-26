@@ -1,20 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup</title>
-</head>
-<body>
-     <nav>
-         <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="">Gallery</a></li>
-                <li><a href="">Sign Up</a></li>
-            </ul>
-          
-    </nav>
-</body>
-</html>
+{% extends "base.html" %}
+    
+{% block title %} Sign Up {% endblock %}       
+
+{% block content %}
+
+
+
+ <div class="form-container"> 
+         <h1 style="text-align: center; margin-bottom: 20px;">Create Account</h1>
+    <form action="" >
+        <div class="form-group">
+    <label for="name">Full Name:</label> 
+    <input id="name" name="name" type="Full Name" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+    <label for="email">Email Address:</label>
+    <input id="email" name="email" type="Email Address" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+    <label for="password">Password:</label>
+    <input id="password" name="password" type="Password" placeholder="Enter your password" required>
+        </div>
+
+         <div class="form-group">
+    <label for="password">Confirm Password:</label>
+    <input id="password" name="password" type="Confirm Password" placeholder="Confirm password" required>
+        </div>
+
+         <div class="">
+    <label for="terms">I agree to the terms and condition:</label>
+    <input type="checkbox" id="terms" name="terms" required>
+        </div><br>
+
+     <button>SignUp</button> 
+    </form>
+    </div>
+{% endblock %}

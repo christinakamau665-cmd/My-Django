@@ -1,0 +1,190 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+     <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    <link rel="Stylesheet" href="{% static 'styles/bootstrap/css/bootstrap.css' %}">
+     <style>
+     
+        .site-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            font-family: sans-serif;
+        }
+
+        .brand-logo {
+            color:gold;
+            font-size: 15px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li { 
+            margin-left: 30px; 
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color:khaki;
+        }
+              .form-container {
+            width: 350px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column; 
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+    
+        .input-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+    
+        .input-container i {
+            position: absolute;
+            left: 12px;
+            color: #8a8a8a;
+            font-size: 14px;
+            transition: color 0.3s ease;
+            pointer-events: none
+        }
+
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            color:black;
+            width: 100%;
+            padding: 10px 12px 10px 36px; 
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+           
+            background-color: #fff;
+            appearance: none; 
+           
+        }
+
+        .input-container.select-container::after {
+            content: '\f078';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 12px;
+            color: #8a8a8a;
+            pointer-events: none;
+        }
+
+        .input-container input:focus, 
+        .input-container select:focus {
+            border-color: #d2b48c; 
+            box-shadow: 0 0 5px rgba(210, 180, 140, 0.5);
+        }
+
+        .input-container input:focus ~ i,
+        .input-container select:focus ~ i {
+            color: #8b5a2b; 
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: aqua;
+            color:black;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #6e4722;
+        }
+
+    </style
+</head>
+<body>
+      <header class="site-header">
+        <h2 class="brand-logo">MyShop</h2>
+    </header>
+     <nav class="navbar">
+         <ul class="nav">
+            <li><a class ="nav-link"href="{% url 'index' %}">Home</a></li>
+            <li><a class ="nav-link"href="{% url 'about' %}">About</a></li>
+            <li><a class ="nav-link"href="{% url 'contact' %}">Contact</a></li>
+            <li><a class ="nav-link"href="{% url 'gallery' %}">Gallery</a></li>
+            <li><a class ="nav-link"href="{% url 'signup' %}">Sign Up</a></li>
+        </ul>
+    </nav>
+     <div class="form-container"> 
+         <h1 style="text-align: center; margin-bottom: 20px;">Create Account</h1>
+    <form action="" >
+        <div class="form-group">
+    <label for="name">Full Name:</label> 
+    <input id="name" name="name" type="Full Name" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+    <label for="email">Email Address:</label>
+    <input id="email" name="email" type="Email Address" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+    <label for="password">Password:</label>
+    <input id="password" name="password" type="Password" placeholder="Enter your password" required>
+        </div>
+
+         <div class="form-group">
+    <label for="password">Confirm Password:</label>
+    <input id="password" name="password" type="Confirm Password" placeholder="Confirm password" required>
+        </div>
+
+         <div class="">
+    <label for="terms">I agree to the terms and condition:</label>
+    <input type="checkbox" id="terms" name="terms" required>
+        </div><br>
+
+     <button>SignUp</button> 
+    </form>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    <link rel="Stylesheet" href="{% static 'styles/bootstrap/css/bootstrap.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav">
+            <li><a class ="nav-link"href="{% url 'index' %}">Home</a></li>
+            <li><a class ="nav-link"href="{% url 'about' %}">About</a></li>
+            <li><a class ="nav-link"href="{% url 'contact' %}">Contact</a></li>
+            <li><a class ="nav-link"href="{% url 'gallery' %}">Gallery</a></li>
+            <li><a class ="nav-link"href="{% url 'signup' %}">Sign Up</a></li>
+        </ul>
+          
+    </nav>
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>
